@@ -1,5 +1,5 @@
 pipeline {
-  agent { label 'node_all' }
+  agent any
   stages {
     stage('vcs') {
       steps {
