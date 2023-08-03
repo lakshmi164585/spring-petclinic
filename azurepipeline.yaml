@@ -1,5 +1,5 @@
 pool:
-  name: "Default"
+  name: "ubuntu_latest"
 trigger:
   - main
 jobs:
