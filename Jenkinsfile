@@ -1,9 +1,9 @@
 pipeline {
-  agent { labels 'node1' }
+  agent { label 'node1' }
   triggers { pollSCM ('* * * * *') }
     tools {
-        jdk 'JDK_17'
-        maven 'MAVEN_HOME'
+        jdk 'JAVA_17'
+        maven 'MVN_HOME'
     }
   stages {
     stage('vcs') {
