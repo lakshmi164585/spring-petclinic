@@ -12,12 +12,11 @@ pipeline {
                 }
         }
 
-    stage('vcs') {
-      steps {
-        git url: 'https://github.com/lakshmi164585/spring-petclinic.git',
-            branch: 'main'
-      
-           }
-       }
+     stage("Checkout from SCM"){
+                steps {
+                    git branch: 'main', credentialsId: 'github', url: 'https://github.com/lakshmi164585/jenkins_proj2'
+                }
+        }
+
    }
 }
