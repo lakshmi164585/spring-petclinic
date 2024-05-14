@@ -6,6 +6,12 @@ pipeline {
         maven 'MVN_HOME'
     }
   stages {
+    stage("Cleanup Workspace"){
+                steps {
+                cleanWs()
+                }
+        }
+
     stage('vcs') {
       steps {
         git url: 'https://github.com/lakshmi164585/spring-petclinic.git',
