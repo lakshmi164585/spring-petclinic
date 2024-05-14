@@ -1,5 +1,5 @@
 pipeline {
-  agent { labels 'jenkins_one' }
+  agent { labels 'node1' }
   triggers { pollSCM ('* * * * *') }
     tools {
         jdk 'JDK_17'
